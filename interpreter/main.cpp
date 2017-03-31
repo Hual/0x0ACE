@@ -8,7 +8,7 @@
 
 enum e_opcode : uint8_t
 {
-	move = 0x00,
+	mov = 0x00,
 	or = 0x01,
 	xor = 0x02,
 	and = 0x03,
