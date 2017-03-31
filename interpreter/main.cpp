@@ -64,7 +64,7 @@ char* disasm_opcode[]
 	"jz  "
 };
 
-char* disasm_mod[0x04]
+char* disasm_mod[]
 {
 	"imm    ",
 	"reg    ",
@@ -72,7 +72,7 @@ char* disasm_mod[0x04]
 	"reg-reg"
 };
 
-char* disasm_reg[0x04]
+char* disasm_reg[]
 {
 	"r0",
 	"r1",
