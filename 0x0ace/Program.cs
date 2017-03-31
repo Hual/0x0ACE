@@ -50,7 +50,7 @@ namespace _0ace
 
                 DownloadContents(download, "0x0ACE.BIN");
 
-                Start0x00000ACEInterpreter("0x0ace.exe", "0x0ACE.BIN", pathMatch.Groups[1].Value);
+                Start0x00000ACEInterpreter("interpreter.exe", "0x0ACE.BIN", pathMatch.Groups[1].Value);
             }
             catch (Exception e)
             {

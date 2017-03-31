@@ -95,7 +95,7 @@ struct instruction
 	instruction_minimal base;
 	uint16_t imm = 0;
 
-	instruction(uint16_t* bytes) : base(*reinterpret_cast<instruction_minimal*>(bytes)) { }
+	instruction(const uint16_t& bytes) : base(reinterpret_cast<const instruction_minimal&>(bytes)) { }
 };
 
 static struct {
@@ -139,7 +139,7 @@ bool load(const char* path, instruction::list& output)
 		size_t ipc = output.size() - 1;
 
 		if (new_instruction) {
-			output.push_back(&buf);
+			output.push_back(buf);
 			++ipc;
 
 			if (output[ipc].base.mod == reg_imm || output[ipc].base.mod == imm) {
